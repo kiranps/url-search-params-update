@@ -17,6 +17,7 @@
     "test:watch": "nwb test --server"
   },
   "dependencies": {
+    "url-search-params": "^0.10.0"
   },
   "devDependencies": {
     "nwb": "0.20.x"
