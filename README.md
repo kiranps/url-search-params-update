@@ -25,3 +25,7 @@ const foo = params.set("foo", "sindresorhus")
 const foo = params.delete("x")
 //=> '?foo=sindresorhus'
 ```
+
+## License
+
+MIT © [Kiran P S]
