@@ -7,12 +7,12 @@ var URLQueryChange = function () {
     _classCallCheck(this, URLQueryChange);
   }
 
-  URLQueryChange.prototype.get = function get(key) {
+  URLQueryChange.get = function get(key) {
     var params = window.URLSearchParams ? new URLSearchParams(location.search) : URLSearchParamsPoylfill(location.search);
     return params.get(key);
   };
 
-  URLQueryChange.prototype.set = function set(key, value) {
+  URLQueryChange.set = function set(key, value) {
     var params = window.URLSearchParams ? new URLSearchParams(location.search) : URLSearchParamsPoylfill(location.search);
     params.set(key, value);
     window.history.replaceState({}, '', location.pathname + '?' + params);

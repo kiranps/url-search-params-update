@@ -1,5 +1,5 @@
 /*!
- * url-query-change v1.0.0
+ * url-query-change v1.1.0
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -102,12 +102,12 @@ var URLQueryChange = function () {
     _classCallCheck(this, URLQueryChange);
   }
 
-  URLQueryChange.prototype.get = function get(key) {
+  URLQueryChange.get = function get(key) {
     var params = window.URLSearchParams ? new URLSearchParams(location.search) : __WEBPACK_IMPORTED_MODULE_0_url_search_params___default()(location.search);
     return params.get(key);
   };
 
-  URLQueryChange.prototype.set = function set(key, value) {
+  URLQueryChange.set = function set(key, value) {
     var params = window.URLSearchParams ? new URLSearchParams(location.search) : __WEBPACK_IMPORTED_MODULE_0_url_search_params___default()(location.search);
     params.set(key, value);
     window.history.replaceState({}, '', location.pathname + '?' + params);
