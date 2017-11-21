@@ -1,5 +1,5 @@
 {
-  "name": "url-query-change",
+  "name": "url-search-params-update",
   "version": "1.2.0",
   "description": "Describe url-query-change here",
   "main": "lib/index.js",

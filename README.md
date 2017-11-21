@@ -1,16 +1,27 @@
-# url-query-change
+# URL Search Params Update
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+> set, get and delete search params from url
 
-Describe url-query-change here.
+## Install
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+```sh
+npm install --save url-search-params-update
+```
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
+## Usage
 
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+```
+import params from 'url-search-params-update' 
+
+console.log(location.search)
+//=> '?foo=bar&x=y'
+
+const foo = params.get("foo")
+//=> 'bar'
+
+const foo = params.set("foo", "sindresorhus")
+//=> '?foo=sindresorhus&x=y'
+
+const foo = params.delete("x")
+//=> '?foo=sindresorhus'
+```

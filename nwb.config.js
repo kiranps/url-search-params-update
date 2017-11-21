@@ -3,7 +3,7 @@ module.exports = {
   npm: {
     esModules: true,
     umd: {
-      global: 'URLQueryChange',
+      global: 'URLSearchParamsUpdate',
       externals: {}
     }
   }
