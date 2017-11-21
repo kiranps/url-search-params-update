@@ -107,9 +107,9 @@ var URLQueryChange = function () {
     return params.get(key);
   };
 
-  URLQueryChange.prototype.set = function set() {
+  URLQueryChange.prototype.set = function set(key, value) {
     var params = window.URLSearchParams ? new URLSearchParams(location.search) : __WEBPACK_IMPORTED_MODULE_0_url_search_params___default()(location.search);
-    params.set(key, val);
+    params.set(key, value);
     window.history.replaceState({}, '', location.pathname + '?' + params);
   };
 

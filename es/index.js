@@ -12,9 +12,9 @@ var URLQueryChange = function () {
     return params.get(key);
   };
 
-  URLQueryChange.prototype.set = function set() {
+  URLQueryChange.prototype.set = function set(key, value) {
     var params = window.URLSearchParams ? new URLSearchParams(location.search) : URLSearchParamsPoylfill(location.search);
-    params.set(key, val);
+    params.set(key, value);
     window.history.replaceState({}, '', location.pathname + '?' + params);
   };
 
