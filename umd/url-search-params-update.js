@@ -1,5 +1,5 @@
 /*!
- * url-query-change v1.1.0
+ * url-search-params-update v1.2.0
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -8,9 +8,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["URLQueryChange"] = factory();
+		exports["URLSearchParamsUpdate"] = factory();
 	else
-		root["URLQueryChange"] = factory();
+		root["URLSearchParamsUpdate"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -90,30 +90,36 @@ module.exports = __webpack_require__(1);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return URLQueryChange; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return URLSearchParamsUpdate; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url_search_params__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url_search_params___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_url_search_params__);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
 
-var URLQueryChange = function () {
-  function URLQueryChange() {
-    _classCallCheck(this, URLQueryChange);
+var URLSearchParamsUpdate = function () {
+  function URLSearchParamsUpdate() {
+    _classCallCheck(this, URLSearchParamsUpdate);
   }
 
-  URLQueryChange.get = function get(key) {
+  URLSearchParamsUpdate.get = function get(key) {
     var params = window.URLSearchParams ? new URLSearchParams(location.search) : __WEBPACK_IMPORTED_MODULE_0_url_search_params___default()(location.search);
     return params.get(key);
   };
 
-  URLQueryChange.set = function set(key, value) {
+  URLSearchParamsUpdate.set = function set(key, value) {
     var params = window.URLSearchParams ? new URLSearchParams(location.search) : __WEBPACK_IMPORTED_MODULE_0_url_search_params___default()(location.search);
     params.set(key, value);
     window.history.replaceState({}, '', location.pathname + '?' + params);
   };
 
-  return URLQueryChange;
+  URLSearchParamsUpdate.delete = function _delete(key) {
+    var params = window.URLSearchParams ? new URLSearchParams(location.search) : __WEBPACK_IMPORTED_MODULE_0_url_search_params___default()(location.search);
+    params.delete(key);
+    window.history.replaceState({}, '', location.pathname + '?' + params);
+  };
+
+  return URLSearchParamsUpdate;
 }();
 
 

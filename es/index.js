@@ -2,23 +2,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 import URLSearchParamsPoylfill from 'url-search-params';
 
-var URLQueryChange = function () {
-  function URLQueryChange() {
-    _classCallCheck(this, URLQueryChange);
+var URLSearchParamsUpdate = function () {
+  function URLSearchParamsUpdate() {
+    _classCallCheck(this, URLSearchParamsUpdate);
   }
 
-  URLQueryChange.get = function get(key) {
+  URLSearchParamsUpdate.get = function get(key) {
     var params = window.URLSearchParams ? new URLSearchParams(location.search) : URLSearchParamsPoylfill(location.search);
     return params.get(key);
   };
 
-  URLQueryChange.set = function set(key, value) {
+  URLSearchParamsUpdate.set = function set(key, value) {
     var params = window.URLSearchParams ? new URLSearchParams(location.search) : URLSearchParamsPoylfill(location.search);
     params.set(key, value);
     window.history.replaceState({}, '', location.pathname + '?' + params);
   };
 
-  return URLQueryChange;
+  URLSearchParamsUpdate.delete = function _delete(key) {
+    var params = window.URLSearchParams ? new URLSearchParams(location.search) : URLSearchParamsPoylfill(location.search);
+    params.delete(key);
+    window.history.replaceState({}, '', location.pathname + '?' + params);
+  };
+
+  return URLSearchParamsUpdate;
 }();
 
-export { URLQueryChange as default };
+export { URLSearchParamsUpdate as default };
