@@ -1,6 +1,6 @@
 {
   "name": "url-search-params-update",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Describe url-query-change here",
   "main": "lib/index.js",
   "module": "es/index.js",
