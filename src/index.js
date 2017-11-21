@@ -6,9 +6,9 @@ export default class URLQueryChange {
     return params.get(key)
   }
 
-  set() {
+  set(key, value) {
     const params = window.URLSearchParams ? new URLSearchParams(location.search) : URLSearchParamsPoylfill(location.search)
-    params.set(key, val)
+    params.set(key, value)
     window.history.replaceState({}, '', `${location.pathname}?${params}`);
   }
 }
