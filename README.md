@@ -10,7 +10,7 @@ npm install --save url-search-params-update
 
 ## Usage
 
-```
+```js
 import params from 'url-search-params-update' 
 
 console.log(location.search)
