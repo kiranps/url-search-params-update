@@ -19,10 +19,10 @@ console.log(location.search)
 const foo = params.get("foo")
 //=> 'bar'
 
-const foo = params.set("foo", "sindresorhus")
+params.set("foo", "sindresorhus")
 //=> '?foo=sindresorhus&x=y'
 
-const foo = params.delete("x")
+params.delete("x")
 //=> '?foo=sindresorhus'
 ```
 
