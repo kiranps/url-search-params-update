@@ -22,8 +22,8 @@
   "devDependencies": {
     "nwb": "0.20.x"
   },
-  "author": "",
-  "homepage": "",
+  "author": "Kiran PS",
+  "homepage": "https://github.com/kiranps/url-search-params-update",
   "license": "MIT",
-  "repository": ""
+  "repository": "https://github.com/kiranps/url-search-params-update"
 }
